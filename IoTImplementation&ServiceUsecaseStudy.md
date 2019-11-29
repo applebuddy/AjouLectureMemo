@@ -1,132 +1,10 @@
-# AjouLectureMemo
-
-<br>
-<br>
-<br>
-
-# 블록체인과 보안
-
-<br>
-
-## 블록체인(BlockChain)  이란?
-- 블록을 통해 데이터들이 사용 됨
-- 무결성, 신뢰성, 보안성이 보장되는 데이터
-- 블록은 각각이 거래(Transaction)을 발생시키는 노드이다. 
-- 노드 간 사슬(Chain)처럼 연결이 되어있음
-- 블록체인은 공공거래장부, 분산장부 
-- P2P 네트워크를 통해 전파 및 거래가 가능
-
-- 헤더의 해쉬값을 바꾸면 다른 노드의 해쉬값도 변경됨 
-- 블록체인의 위조 및 변조가 어려운 이유
-- bitcoind는 새로은 트랜젝션이 존재하는지 계속 확인한다.
-- bitcoind : 일종의 데몬 프로그램
-
-- *제네시스 블록 : 처음 생성되는 블록을 의미한다.
-
-<br>
-<br>
-
-## 이더리움
-- ETH(ether)
-- 1 Ehter = 1,000,000,000,000,000,000 wei
-
-### 이더리움 기능
-- 스마트 컨트랙트 (Smart Contract)
-- 거래를 위한 다양한 기능 추가 가능 
-- 자동화된 계약 (Automated Contract)     
-
-### 이더리움 구조
-- 상태 전이 (state transition) 머클 트리를 사용
-- 상태전이 일반 머클 확장 패트리샤 트리 
-- 솔리디티 언어로 작동
-- 개발경험이 있다면 배우기 어렵지 않음(
-- 단, 개발경험이 없으면 좀 어려울 수도 있음
-
-### 중요정보취급, Input 필드
-
-- 이더리움에서 거래는 암호화되지 않는다 .
-  - -> 상태를 private internal 로 설정해도 input 필드 확인 등으로 데이터 확인 가능 
-
-- 오버플로우
-  - 오버플로우 발생 시 데이터에 오류 발생
-  - 오버플로우 발생 후에도 거래는 정상적으로 종료, 데이터 오류를 인지하기 어려울 수 있음.
-
-<br>
-<br>
-
-## 하이퍼 레저 패브릭 네트워크
-- Hyperledger Fabric Network
-- 다양한 언어를 통한 체인코드 제공
-- Go, Java, Node.js 등..
-- 다양한 합의 알고리즘 중 선택 가능
-- PBFT, Kafka, RAFT...
-
-<br>
-
-### 분산원장
-- Distributed ledger
-- 데이터를 저장하는 데이터베이스를 블록체인에 참여하는 사람들이 동일한 원장을 소유 및 관리하는 기술
-- 중앙화된 서버가 소유하지 않음 
-
-- 분산 애플리케이션 (Dapp, Decentralized Application)
-- 프로그래밍을 통해 다양한 응용프로그램을 만들 수 있음.
-- 합의 (Consensus)
-- 트랜젝션을 정해진 순서에 맞춰 정렬
-- -> 정렬된 트랜젝션의 유효성 검증 후 최신 블록 업데이트
-
-<br>
-
-### 비트코인 vs 이더리움  vs  하이퍼레저 패브릭
-- 네트워크 :         Public       / Public or Private / 허가형 Private
-- 암호화폐 :         BTC          / ETH                    / 자체화폐x, 체인코드 통해 개발
-- 스마트컨트랙트 :   x            / Solidity 개발       / 
-Go, Java ,Node.js 등 개발
-- 합의알고리즘 :   PoW         / PoW,PoA           / PBFT, Kafka, RAFT
-- 블록 생성속도 : 10~20 min / 10~20 sec         / Faster than others
-
-### 퍼블릭 vs 프라이빗 
-- BTC, ETH / IBM Fabric, LoopChain, R3 Corda
-
-### 하이퍼레저 패브릭 구성요소
-- Peer 
-- Peer Node라고도 부른다. 
-- 하이퍼레저 패브릭 블록체인을 구성하는 네트워크 노드 (Network Node)
-- 모든 Peer는 자기만의 분산원장과 체인코드를 관리
-
-- ChainCode, 체인코드
-- 분산원장에 데이터를 기록하거나 읽기 위한 스마트 컨트랙트
-- 분산 애플리케이션 (DApp)과 함께 개발되어 사용한다. 
-- 시스템 레벨에서의 다섯개의 체인코드를 제공
-- 하이퍼레저 패브릭 시스템 레벨에서 수행되는 체인코드 (기본적으로 제공)
-- GSCC (Query System Chaincode) : 블록, 트랜젝션 정보 조회
-- ESCC (Endorser System Chaincode) : 트랜젝션 보증정책 담당
-- VSCC (Validator System Chaincode) : 블록 검증
-- CSCC (Configuration System Chaincode) : 채널 설정
-- LSCC (Life Cycle System Chaincode)  : 체인코드의 생명주기를 위한 체인코드 
-- DApp, 디앱
-- Endorsement Policy, 보증정책
-- 트랜젝션을 생성하는 클라이언트(분산 애플리케이션(Distributed Application)와 peer 사이에 작용
-- Organization, 조직
-- Channel
-- Ledger
-- Gossip
-- Identity
-- MSP (Membership Service Provider)
-- Orderer 
-- 들어온 트랜젝션의 보증정책 등 검증 후, 채널안에 구성되어있는 peer들에게 Broadcasting
-
-<br>
-
-<br>
-<br>
-<br>
-
 # IoT 응용 및 서비스 사례 연구
 
 <br>
 <br>
 
 ## IoT 플랫폼 
+
 - 1-1
 - 센서 (Sensor) + 통신 (Communication) + 사람 (Human) 의 연결
 - Producer -> Platform(Mart) -> Consumer 
@@ -139,6 +17,7 @@ Go, Java ,Node.js 등 개발
 <br>
 
 ### Apple vs Andriod
+
 - 폐쇄형 플랫폼, Apple 
 - 공개형 플랫폼, Andriod
 
@@ -146,31 +25,36 @@ Go, Java ,Node.js 등 개발
 <br>
 
 ### 인터넷 세대 추세 
+
 - I1)윈도우 운영체제 플랫폼 
 - I2) -> 모바일+앱 융합 플랫폼 
 - I3) -> SNS 서비스 플랫폼 
 - I4) -> 사물인터넷(IoT) 플랫폼 -> 오늘날 플랫폼 장악을 위한 시장경쟁 중
--  * I : 인터넷
+- * I : 인터넷
 
 <br>
 
 ### 현 마켓 추세 
+
 - F(acebook)A(mazon)N(etflex)G(oogle) 
--> M(icrosoft)A(pple)G(oogle)A(mazon)
+  -> M(icrosoft)A(pple)G(oogle)A(mazon)
 - 세계 시가총액 1위 -> 마이크로소프트(2018년에 애플 제치고 1위 등극)
 - 아마존은 현재 뭘로 돈을 버나? -> 클라우드 서비스(AWS)
+
 * Amazon : AI 엔지니어가 가장 많은 곳… AI 스피커를 최초로 만든 곳
 
 <br>
 
 ### Clouding Platform을 누가 장악했나?? 
+
 - MS : 장터(platform)를 만들고 자기들도 파는 상황, 윈도우뿐만 아니라… 
 - 플랫폼을 어떻게 장악하고 플레이 하느냐가 중요
-iOS Android 는 운영체제 
+  iOS Android 는 운영체제 
 
 <br>
 
 ### 가상화폐 != 블록체인
+
 -> 가상화폐가 블록체인 기술을 응용한 것 뿐이다. 
 
 <br>
@@ -178,12 +62,14 @@ iOS Android 는 운영체제
 
 
 ## IoT 응용
+
 - 1-2
 - Healthcare, Home, Car...
 
 <br>
 
 ### Smart Healthcare
+
 - 질병치료 중심, 예방과 관리 -> 건강한 삶의 유지 및 패러다임 전환
 - Healthcare 플랫폼
   - Apple
@@ -196,35 +82,35 @@ iOS Android 는 운영체제
     - 스마트 약병으로 복약시간이 되면 뚜껑의 램프가 점등 + 소리를 냄
     - 제 시간에 뚜껑이 안열리점 SMS 등으로 정보 전송
     - 약일 떨어지면 해당 사실 통보
-  
+
   - HAPIfork
     - 스마트 포크  
     - 과학적인 건강관리로 삶의 질 향상 유도 
     - 음식 투입속도, 포크 이용 횟수 등 데이터 측정, 데이터 기반 식습관 제안
-    
+
   - Bee+
     - 스마트 인슐린 펜
     - 당뇨병 환자의 투약정보를 스마트폰에 전송 및 투약주기 관리
-    
+
   - UrinCare
     - 스마트폰 기반 대소변 관리 시스템
     - 스스로 대소변을 처리하기 힘든 고령층, 환자들이 사용
     - 대소변 배출 시, 보호자나 요양사에게 해당 사실 전송
-  
+
   - Corventis
     - 심장박동 모니터링 기계
     - 심장 이상여부를 판단 하고 이상 발생 시 환자에게 조언
     - 심장 질환으로 인한 사망 확률 최소화
-    
+
   - MPM
     - 1회용 밴드처럼 심장 부위 부착 
     - 심장의 부정맥, 심부전 등 체크 및 경고 
-    
+
   - OMsignal
     - 스마트 의류
     - 옷에 내장된 센서를 통해 심박수, 호흡상태, 칼로리 소모량, 운동량 등 모니터링
       - 이상 시 스마트폰으로 해당 내용을 알림
-      
+
   - Connected Bicycle
     - 삼성 커넥티드 자전거
     - 자전거 주행속도, 운행거리, 운동량 등 파악 
@@ -232,6 +118,7 @@ iOS Android 는 운영체제
 <br>
 
 ### Smart Home
+
 - 주거환경에 IT를 융합, 복지증진 및 안전한 생활이 가능 
 - 스마트 라이프 환경 구축
 
@@ -239,50 +126,53 @@ iOS Android 는 운영체제
   - Google IoT 플랫폼
     - Android 기반 IoT 플랫폼
     - 가정용 CCTV기업, "드롭캠" 인수
-    
+
   - Google Nest Labs
     - 실내의 온도 조절
     - 실내 온도와 보일러의 가동 내역 등 기록
     - 기록 된 데이터들을 클라우드에 누적되어 분석에 활용
     - 인터넷과 연결되어 실내를 쉽게 관리 
-    
+
   - Apple HomeKit
     - iOS를 활용해서 스마트폰으로 연결된 가전제품을  제어 
-    
+
   - Samsung SmartThings
     - IoT 개방형 플랫폼
     - 습도센서, 개폐센서, 모션센서, 카메라, 스피커 등이 스마트폰과 연결
     - 스마트폰을 통한 원격 모니터링, 제어 가능
-    
+
   - LG전자 SmartThinQ Hub
     - 스마트홈(Smart Hime) 서비스를 지원
     - 가전제품 상태, 개인일정, 날씨등을 화면과 음성으로 제공
-    
+
   - 그 외
     - 스마트폰을 통한 조명 제어
     - 초인종을 눌렀을때 카메라가 스마트폰으로 공유
     - 아기의 내의에 부착되어 모니터링되는 카메라가 스마트폰과 공유 
-  
+
 <br>
 
 ### Smart Car
+
 - 첨단 컴퓨터 / 통신 / 측정기술, 지능제어 기술 등을 이용, 자동 운행 차량 개발
 - ✓ 응용 예시
   - 커넥티드 카(Connected Car), 무인 자동차, 자율주행 차량
 
 <br>
-  
+
 ### Smart Grid
+
 - 전력망에 IT기술을 접목 
   - 실시간 전력망 정보 확인 및 에너지 효율 최적화
 - ✓ 응용 예시
   - 송도 AMI
     - 송도 인천 경제자유구역, 송도국제도시가 스마트그리드 도시
     - 에너지 컨설팅 사업 진행
-  
+
 <br>
 
 ### Smart Factory
+
 - 4차 산업혁명의 목표
 - CPS(CyberPhysical System), IoT, BigData 등 핵심기술사용 
 - Smart Factory 핵심기술
@@ -307,17 +197,122 @@ iOS Android 는 운영체제
 <br>
 
 ### Smart Farm
+
 - ICT를 결합한 지능화 농장
 - CCTV, 각종 센서를 통한 모니터링, 환경 분석
 
 <br>
 
 ### Smart City
+
 - 스마트시티 의 최종 가치
+
   - 기본욕구 충족
   - 인간성 회복
   - 도시공간의 본질 회복
+
   
-  
+
 <br>
 
+
+
+# 다국적 기업의 전략 이해
+
+## Apple 전략 이해
+
+### Apple의 역사 
+
+- **1976**년도
+  -  **Apple 회사가 탄생**
+- 1981년도
+  - 스티브 잡스 새 회장에 신임
+- 1985년도
+  - 스티브 워즈니악의 비행기 사고 및 애플 떠남
+- 1984년도
+  - 1984 슈퍼볼 중계에 애플광고가 방영
+- 1996년도
+  - 애플, NeXT사를 $430백만 달러에 인수
+- 1997년도
+  - 스티브 잡스, 임시 CEO로 취임
+  - iMac 개발
+- **2009**년도
+  - **iPhone3GS, iPad 개발**
+    - **애플의 전성기 도래**
+
+### Apple의 기업 문화
+
+- **폐쇄적인 신비주의**
+  - **새로운 기기나 서비스를 개발 할때마나 비밀리에 진행**
+    - 해당 특성은 Steve Jobs로부터 유래
+  - Siri의 성능 개선, 자사의 AI 역량 강화를 위해 노력
+    - 얼굴인식 감정 분석 등의 성능 개선
+- **아이폰 중심**
+  - **아이폰의 역량 강화** 
+    - **메모리 반도체나 펌웨어 보안, 지리정보, 데이터 분석 ,영상 분야 관련 기업을 인수**
+    - 헤드폰 제조업체(BitsElectronics), 3D 동작인식센서 관련 기업(PrimeSense) 인수
+- M & A
+  - **AR 및 AI 투자**
+    - AI : **Artificial Intelligence, 인공지능 을 의미**
+    - AR : **Argumented Reality, 증강현실 을 의미**
+    - 2015년 11월, 모션캡쳐 관련 기업, FaceShift 인수
+    - 2010년, 음성인식 비서 플랫폼 Siri 인수
+- Apple Solution
+  - **Apple TV**
+    - **단순한 OTT 셋톱박스가 아닌 스마트홈을 위한 허브(Hub)**
+  - **iWatch**
+    - 이용자의 운동량을 지속적으로 측정해주는 Fitness Tracker Function
+    - 이용자의 Health Data를 수집
+    - Siri 연동
+  - **Apple Pay**
+    - NFC기반 모바일 결제 플랫폼
+      - 지문인식기능을 통한 본인 인증
+      - 터치ID
+  - **Siri**
+  - 개인비서 서비스
+    - 개인비서 서비스에 얼굴/음성 인식 기술을 추가해 고도화 추진
+    - Apple AI 기술의 핵심은 개인비서 서비스인 Siri
+      - 음성대화를 보다 자연스럽게 만드는 자연어 처리 기술 업체, VocalIQ
+      - 스마트폰 사진 분류 기술 업체, Perceptio
+      - 안면 근육 움직임을 분석해 감정을 추정하는 기술 업체 Emotient를 최근 인수
+    - Apple은 스마트폰에 이러한 AI 기능을 내장, 외부 데이터 의존도를 낮추는 것을 목표로 연구 중 
+  - HeathKit
+  - Titan Project
+    - **애플 전치가 개발을 하려 했으나 사실상 중단**
+    - **-> 자율주행기술 개발로 전략을 수정**
+- iOS12
+  - Vertical Integration 기반의 성능 최적화 
+    - AP(CPU) 제어를 통한 성능 향상
+    - **AR 생태계 구측을 위해 노력**
+      - **AR앱을 iOS12버전부터 기본 제공**, 제휴를 통한 컨텐츠 협업 개발
+      - **애플은 자체 개발한 "Measure"라는 앱을 iOS12부터 탑재**, 사용자들이 카메라를 통해 거리 및 사물의 크기를 측정할 수 있는 기능을 제공
+      - Adobe, Autodesk 등 7개 기업과의 제휴를 통해 AR 컨텐츠 제작을 시작
+- 사업 전략
+  - 아이폰 만으로는 매출의 제약이 따름
+  - 아이폰 없는 미래를 목표로 함 
+    - **하드웨어에서 서비스 중심 사업**
+      - **Entertainment, Content Service, AR/VR, 자율자동차, 인공지능 등의 기술에 주력**
+  - **Google vs Apple 전략 비교**
+    - **Google, Apple 둘 다 인공지능, 자율주행, VR/AR 등의 소프트웨어 기술을 중심으로 혁신 도모 중**
+    - **Google**
+      - **혁신적 기술의 선제적 시도**
+      - **개방을 통한 참여자 확대**
+      - 사업 분야
+        - 대화형 인공지능 기반 B2C 영역
+        - 자율주행, 위치기반 서비스 등 
+    - **Apple**
+      - **상용화 가능 수준 기술의 완결성 추구**
+      - **독자 생태계 기반 + 제한적 제휴/협력**
+      - 사업 분야
+        - 대화형 인공지능 기반 B2C 영역
+        - VR, Fitness/HealthCare, 인증/결제, AppleTV, iPhone...
+
+<br><br>
+
+## Google 전략 이해
+
+<br><br>
+
+## 페이스북 전략 이해
+
+<br><br>
